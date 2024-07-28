@@ -1,0 +1,8 @@
+[project]
+name = "pass-man"
+version = "0.0.1"
+description = "Password Manager for local"
+
+[build-system]
+build-backend = "flit_core.buildapi"
+requires = ["flit_core >=3.2,<4"]
