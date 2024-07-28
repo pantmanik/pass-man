@@ -7,10 +7,19 @@ salt_size = 8
 key_size = 32
 
 
-def get_aes_key_data(password):
+def generate_aes_key_data(password):
+    if is_empty(password):
+        return None
     salt = get_random_bytes(salt_size)
     key = PBKDF2(password, salt, key_size)
     return key, salt
+
+
+def get_aes_key_data(password, salt):
+    if is_empty(password) or is_empty(salt):
+        return None
+    key = PBKDF2(password, salt, key_size)
+    return key
 
 
 def get_encoded_bytes(text: str):
