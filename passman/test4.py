@@ -1,4 +1,5 @@
-from passman.Manager.UserDataManager import get_data_manager, set_master_password, unset_master_password, is_master_password_set
+from passman.Manager.MasterPasswordManager import set_master_password, is_master_password_set, unset_master_password
+from passman.Manager.UserDataManager import get_data_manager
 from passman.Manager.PasswordManager import get_salt, get_password, fetch_password
 from passman.Manager.EncryptionManager import get_key
 
